@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telekocsi</title>
+    <link rel="stylesheet" href="telekocsi.css">
+
+
+</head>
+
+<body>
+
+    <div class="tartalom">
+        <h1>Telekocsi</h1>
+        <div class="menu">
+            <ul>
+                <li><a href="telekocsi.html">Bemutatkozás<a></li>
+                <li>Sofőröknek</li>
+                <li>Utasoknak</li>
+                <li>Bejelentkezés</li>
+                <li>Regisztráció</li>
+            </ul>
+
+        </div>
+
+        <h2>Regisztráció</h2>
+
+        <form>
+            <span id="span">Név:</span> <input type="text"><br>
+            <span id="span">E-mail cím:</span> <input type="email"><br>
+            <span id="span">Jelszó:</span> <input type="password" id="password" required><br>
+            <span id="span">Jelszó ismét:</span> <input type="password" id="passwordAgain" required><br>
+            <button id="mentes">Mentés</button>
+
+
+        </form>
+
+
+    </div>
+
+    <script>
+        mentes.addEventListener("click", passwordCheck);
+
+        function passwordCheck() {
+            let pass = document.querySelector("#password").value;
+            let passAgain = document.querySelector("#passwordAgain").value;
+            if (pass <= 0 && passAgain <= 0) {
+                alert("Kérem, töltse ki a jelszó mezőket!");
+            }
+            if (pass != passAgain) {
+                alert("A megadott jelszavak nem egyeznek!")
+            }
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>
